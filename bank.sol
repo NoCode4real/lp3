@@ -14,7 +14,7 @@ contract Bank {
         require(balance > 0,"you broke");
         require(msg.sender==accHolder,"bhag bsdk");
         payable(msg.sender).transfer(balance);
-        balance -= msg.value;
+        balance=0;
     }
 
     function deposit() public payable{
